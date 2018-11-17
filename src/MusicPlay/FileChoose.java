@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class FileChoose {
@@ -15,8 +16,9 @@ public class FileChoose {
 	
 	public void fileChoose() {
 		fileChooser = new JFileChooser();
+		FileFilter fileFilter = new FileNameExtensionFilter("mp3","mp3");
+		fileChooser.setFileFilter(fileFilter);
 		fileChooser.showOpenDialog(null);
-		FileNameExtensionFilter fileNameExtensionFilter = new FileNameExtensionFilter("mp3","mp3");
 		try {
 			fileReader = new FileReader(fileChooser.getSelectedFile());
 			fileName = fileChooser.getSelectedFile().toString();
