@@ -1,5 +1,9 @@
 package MusicPlay;
 
+
+/**
+ * 选择文件并且播放
+ */
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
